@@ -35,7 +35,7 @@ const Header = () => {
             <a
               className={` ${
                 router.pathname == menu.path
-                  ? "after:w-[3.7rem] text-white "
+                  ? "after:w-full text-white "
                   : "text-gray-400"
               } relative text-lg hover:text-white transition-all after:bottom-[-3px] font-semibold after:flex after:h-[3px] after:rounded after:w-0 after:transition-all hover:after:w-full after:absolute after:bg-themeCyan`}
             >
