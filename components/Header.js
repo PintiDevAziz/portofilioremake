@@ -27,7 +27,7 @@ const Header = () => {
     },
   ];
   return (
-    <div className="w-full h-20  tracking-widest  bg-themeBlack border-b-2 flex items-center justify-between px-20">
+    <div className="w-full h-20  z-50 tracking-widest  bg-themeBlack border-b-2 flex items-center justify-between px-20">
       <Logo />
       <ul className="flex items-center gap-x-10 ">
         {headerMenus.map((menu, key) => (
