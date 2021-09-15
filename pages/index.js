@@ -7,6 +7,7 @@ import ContactButton from "../components/minicomponents/ContactButton";
 import ScrollDownAnimationData from "../Animations/scrolldown.json";
 import ContactUsAnimationData from "../Animations/contactus.json";
 import { SiInstagram } from "react-icons/si";
+import { FiYoutube } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
 import WebManAnimationData from "../Animations/webman.json";
 import Image from "next/image";
@@ -137,7 +138,7 @@ const Index = () => {
       </div>
       <div className="h-screen index-section justify-center bg-themeBlack flex gap-x-32 items-center px-20">
         <div className="flex flex-col items-center">
-          <div className="border-themeCyan border-4 mb-8 rounded-full overflow-hidden w-60 h-60 object-cover">
+          <div className="border-themeCyan border-8 cursor-pointer hover:shadow-2xl transition-all hover:-translate-y-2 border-double mb-8 rounded-full overflow-hidden w-60 h-60 object-cover">
             <Image
               src="/avatar.png"
               width="400px"
@@ -145,29 +146,44 @@ const Index = () => {
               alt="Aziz Imranzade Profile picture"
             />
           </div>
-          <h1 className="text-gray-300 font-semibold text-3xl mb-6">
+          <h1 className="text-gray-300 font-semibold text-3xl mb-6 ">
             Social Media
           </h1>
           <ul className="flex gap-x-10">
             <li>
-              <a href="#" className="text-themeCyan text-3xl">
-                <SiInstagram />
+              <a
+                href="https://www.instagram.com/i.am.eziz/"
+                className="text-themeCyan text-3xl "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <SiInstagram className="hover:scale-125 hover:text-[#46e8fa] transition-all" />
               </a>
             </li>
             <li>
-              <a href="#" className="text-themeCyan text-3xl">
-                <AiFillGithub />
+              <a
+                href="https://github.com/IamEziz"
+                className="text-themeCyan text-3xl "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiFillGithub className="hover:scale-125 hover:text-[#46e8fa] transition-all" />
               </a>
             </li>
             <li>
-              <a href="#" className="text-themeCyan text-3xl">
-                <SiInstagram />
+              <a
+                href="https://www.youtube.com/channel/UCpERt5A7SNd7s5XNAj2mGmw"
+                className="text-themeCyan text-3xl "
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FiYoutube className="hover:scale-125 hover:text-[#46e8fa] transition-all" />
               </a>
             </li>
           </ul>
         </div>
         <div className=" text-gray-300 text-lg">
-          <h1 className="text-white font-pacifico text-3xl mb-14">
+          <h1 className="text-white font-pacifico text-3xl mb-14 relative after:block after:w-[40%] after:absolute after:bg-themeCyan after:h-1 after:-bottom-2">
             Who Is I Am ?
           </h1>
           <div className="w-[40rem]">
