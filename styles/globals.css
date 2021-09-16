@@ -13,6 +13,9 @@ html {
 .index-section {
   scroll-snap-align: end;
 }
+.footer{
+  scroll-snap-align: start;
+}
 /* width */
 ::-webkit-scrollbar {
   width: 5px;

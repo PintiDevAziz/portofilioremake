@@ -34,7 +34,7 @@ const Index = () => {
   };
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <div className="">
+    <div>
       <div className="index-section px-20 overflow-hidden relative bg-themeBlack h-[calc(100vh-80px)] grid place-items-center grid-cols-2 grid-rows-1">
         <div>
           <div className="text-themeCyan font-bold text-2xl mb-4">
@@ -153,7 +153,7 @@ const Index = () => {
             <li>
               <a
                 href="https://www.instagram.com/i.am.eziz/"
-                className="text-themeCyan text-3xl "
+                className="text-themeCyan text-3xl z"
                 target="_blank"
                 rel="noreferrer"
               >
