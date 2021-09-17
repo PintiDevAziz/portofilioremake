@@ -9,7 +9,6 @@ import ContactUsAnimationData from "../Animations/contactus.json";
 import { SiInstagram } from "react-icons/si";
 import { FiYoutube } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
-import WebManAnimationData from "../Animations/webman.json";
 import Image from "next/image";
 const Index = () => {
   const webDevAnimationOptions = {
@@ -26,11 +25,6 @@ const Index = () => {
     loop: true,
     autoplay: true,
     animationData: ContactUsAnimationData,
-  };
-  const webmanAnimationData = {
-    loop: true,
-    autoplay: true,
-    animationData: WebManAnimationData,
   };
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
