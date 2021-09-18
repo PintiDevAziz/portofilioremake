@@ -22,8 +22,9 @@ module.exports = {
         indigo: colors.indigo,
         red: colors.rose,
         themeCyan: "#68bbc4",
-        themeCyan2:"#418186",
+        themeCyan2: "#418186",
         themeBlack: "#1F2933",
+        themeGray: "#2B3443",
         footerBackground: "#1B222C",
       },
       backgroundImage: () => ({
