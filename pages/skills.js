@@ -1,10 +1,11 @@
 import React from "react";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import SkillBox from "../components/SkillBox";
-import { DiCss3Full, DiSass, DiJavascript1, DiNpm } from "react-icons/di";
+import { DiCss3Full, DiSass, DiJavascript1, DiNpm ,DiPython} from "react-icons/di";
 import { GrReactjs } from "react-icons/gr";
-import { SiNextDotJs } from "react-icons/si";
+import { SiNextDotJs, SiTailwindcss } from "react-icons/si";
 import { VscGithub } from "react-icons/vsc";
+
 const Skills = () => {
   const skillsData = [
     {
@@ -56,34 +57,21 @@ const Skills = () => {
       color: "#cb3837",
     },
     {
-      name: "Html 5",
-      level: "100%",
-      icon: <AiOutlineHtml5 />,
+      name: "TailwindCss",
+      level: "90%",
+      icon: <SiTailwindcss />,
+      color: "#06B6D4",
     },
     {
-      name: "Html 5",
-      level: "100%",
-      icon: <AiOutlineHtml5 />,
-    },
-    {
-      name: "Html 5",
-      level: "100%",
-      icon: <AiOutlineHtml5 />,
-    },
-    {
-      name: "Html 5",
-      level: "100%",
-      icon: <AiOutlineHtml5 />,
-    },
-    {
-      name: "Html 5",
-      level: "100%",
-      icon: <AiOutlineHtml5 />,
-    },
+      name: "Python",
+      level: "30%",
+      icon: <DiPython />,
+      color:"#316A99"
+    }
   ];
   return (
     <div
-      className=" flex flex-col items-center   bg-themeBlack"
+      className="flex flex-col items-center bg-themeBlack pb-4"
       style={{ scrollSnapAlign: "start" }}
     >
       <h1 className="my-10 text-4xl font-pacifico tracking-widest text-themeCyan">

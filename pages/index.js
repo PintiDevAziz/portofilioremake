@@ -10,6 +10,7 @@ import { SiInstagram } from "react-icons/si";
 import { FiYoutube } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
 import Image from "next/image";
+import Head from "next/head";
 const Index = () => {
   const webDevAnimationOptions = {
     loop: true,
@@ -29,6 +30,24 @@ const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div>
+      <Head>
+        <title>I Am Eziz</title>
+        <meta
+          name="description"
+          content="Bura Eziz Imranzadenin Web Sehifesdir"
+        />
+        <meta name="keywords" content="Eziz Imranzade " />
+        <meta
+          property="og:title"
+          content="Aziz Imranzade Full-Stack Developer Website"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="/avatar.png"
+        />
+        <meta property="og:url" content="https://www.colbyfayock.com" />
+      </Head>
       <div className="index-section px-20 overflow-hidden relative bg-themeBlack h-[calc(100vh-80px)] grid place-items-center grid-cols-2 grid-rows-1">
         <div>
           <div className="text-themeCyan font-bold text-2xl mb-4">

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import AnimtedPercent from "../components/AnimatedCircle";
 const SkillBox = (skill) => {
+  const [showCircle, setShowCircle] = useState(false);
   return (
     <div
       style={{ color: skill.color }}
@@ -14,7 +15,7 @@ const SkillBox = (skill) => {
       </h1>
       <div className="w-full">
         <div
-          className="w-full h-3 rounded-lg overflow-hidden border transition-all"
+          className="w-full h-3 rounded-lg bg-themeBlack overflow-hidden border transition-all"
           style={{ borderColor: skill.color }}
         >
           <div
@@ -23,8 +24,16 @@ const SkillBox = (skill) => {
           ></div>
         </div>
       </div>
-      <div className="absolute flex items-center justify-center bg-themeBlack/50 backdrop-blur-md w-full transition-all group-hover:translate-y-0 h-full translate-y-full">
-        <AnimtedPercent percentage={parseInt(skill.level.replace("%", "")   )} />
+      <div
+        onMouseEnter={() => setShowCircle(true)}
+        onMouseLeave={() => setShowCircle(false)}
+        className="absolute flex items-center justify-center bg-themeBlack/50 backdrop-blur-md w-full transition-all group-hover:translate-y-0 h-full translate-y-full"
+      >
+        <AnimtedPercent
+          percentage={
+            showCircle ? parseInt(skill.level.replace("%", "")) : null
+          }
+        />
       </div>
     </div>
   );
