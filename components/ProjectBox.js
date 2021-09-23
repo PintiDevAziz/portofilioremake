@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const ProjectBox = (project) => {
-  console.log(project);
+
   return (
-    <div className="bg-themeGray flex-shrink-0 rounded h-auto border-2 border-themeCyan w-60 border-t-8 border-t-themeCyan2 p-4 flex flex-col items-center">
+    <div className="bg-themeGray flex-shrink-0 rounded h-auto border-2 border-themeCyan w-[19rem] border-t-8 border-t-themeCyan2 p-4 flex flex-col items-center">
       <div className="flex items-center mb-4">
         <div className=" font-semibold text-themeCyan2 text-lg mr-2">
           Creator
@@ -16,7 +16,7 @@ const ProjectBox = (project) => {
         {project.name}
       </div>
 
-      <div className="flex items-center w-full flex-wrap gap-3 mb-6">
+      <div className="flex items-center w-full flex-wrap gap-x-1 gap-y-2 mb-6">
         <div className="rounded-full py-[2px] px-7 items-center justify-center flex border-2 border-themeCyan2 text-themeCyan font-semibold">
           Html
         </div>

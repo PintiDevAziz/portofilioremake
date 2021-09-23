@@ -14,10 +14,6 @@ const Header = () => {
       path: "/skills",
     },
     {
-      title: "Contact",
-      path: "/contact",
-    },
-    {
       title: "Projects",
       path: "/projects",
     },

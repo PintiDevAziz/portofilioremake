@@ -9,7 +9,6 @@ import "react-circular-progressbar/dist/styles.css";
 import AnimatedProgressProvider from "../components/AnimatedProgressProvider";
 import { easeQuadInOut } from "d3-ease";
 const skills = ({ percentage }) => {
-  console.log(typeof percentage);
   return (
     <div className=" w-36 h-36 transition-all">
       <AnimatedProgressProvider

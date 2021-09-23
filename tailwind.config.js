@@ -12,6 +12,7 @@ module.exports = {
         display: ["Oswald"],
         body: ['"Open Sans"'],
         pacifico: ['"Pacifico"'],
+        roboto: ['"Roboto"'],
       },
       colors: {
         transparent: "transparent",
@@ -42,7 +43,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [
-    require('@tailwindcss/typography')
-  ],
+  plugins: [require("@tailwindcss/typography")],
 };
