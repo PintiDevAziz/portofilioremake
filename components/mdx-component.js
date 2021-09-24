@@ -3,6 +3,7 @@ export const mdxComponents = {
   h1: (props) => <h1 className="bg-red-500 text-xl text-black" {...props} />,
   a: (props) => <a {...props} />,
   hr: (props) => <hr {...props} />,
+  img: (props) => <img className="mx-auto" {...props} />,
   p: (props) => <p {...props} />,
   pre: ({ children }) => <Pre {...children.props} />,
   ul: (props) => <ul {...props} />,

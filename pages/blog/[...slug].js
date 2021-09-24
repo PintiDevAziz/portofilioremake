@@ -6,7 +6,6 @@ const PostPage = ({ post }) => {
   const content = useHydrate(post, {
     components: mdxComponents,
   });
-  console.log(content);
 
   return (
     <div className="h-auto  min-h-[calc(100vh-80px)] bg-themeBlack">
