@@ -10,7 +10,7 @@ const PostPage = ({ post }) => {
   return (
     <div className="h-auto  min-h-[calc(100vh-80px)] bg-themeBlack">
       <h1 className="font-pacifico text-3xl text-center  py-6 tracking-wider text-white">{post.frontMatter.title}</h1>
-      <div className=" px-24 text-white text-lg font-roboto">{content}</div>
+      <div className=" content px-24 text-white text-lg font-roboto tracking-wider">{content}</div>
     </div>
   );
 };

@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import BlogPostBox from "../../components/BlogPostBox";
 const Blog = ({ posts }) => {
-  console.log(posts);
   return (
     <div className="min-h-[calc(100vh-80px)] h-auto bg-themeBlack p-24 flex flex-wrap gap-10">
       {posts.map((post, key) => (
