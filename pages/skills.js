@@ -71,13 +71,12 @@ const Skills = () => {
   ];
   return (
     <div
-      className="flex flex-col items-center bg-themeBlack pb-4"
-      style={{ scrollSnapAlign: "start" }}
+      className="flex flex-col items-center bg-themeBlack pb-4  sm:h-auto  h-[calc(100vh-80px)]  overflow-auto skills"
     >
-      <h1 className="my-10 text-4xl font-pacifico tracking-widest text-themeCyan">
+      <h1 className="my-10 text-3xl sm:text-4xl font-pacifico tracking-widest text-themeCyan">
         My Coding Skills
       </h1>
-      <div className=" w-3/4 h-full flex flex-wrap gap-10">
+      <div className=" w-3/4  h-full flex flex-wrap gap-8  justify-center ">
         {skillsData &&
           skillsData.map((skill, key) => <SkillBox key={key} {...skill} />)}
       </div>

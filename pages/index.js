@@ -33,6 +33,10 @@ const Index = () => {
       <Head>
         <title>I Am Eziz</title>
         <meta
+          name="google-site-verification"
+          content="_7XyZx-FbC2VG29NayjjKLrQph_IRF4dYh1LuqvPi6E"
+        />
+        <meta
           name="description"
           content="Bura Eziz Imranzadenin Web Sehifesdir"
         />
@@ -42,15 +46,12 @@ const Index = () => {
           content="Aziz Imranzade Full-Stack Developer Website"
         />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="/avatar.png"
-        />
+        <meta property="og:image" content="/avatar.png" />
         <meta property="og:url" content="https://www.colbyfayock.com" />
       </Head>
-      <div className="index-section px-20 overflow-hidden relative bg-themeBlack h-[calc(100vh-80px)] grid place-items-center grid-cols-2 grid-rows-1">
-        <div>
-          <div className="text-themeCyan font-bold text-2xl mb-4">
+      <div className="index-section sm:px-20 p-4 overflow-hidden relative bg-themeBlack h-[calc(100vh-80px)] grid place-items-center sm:grid-cols-2 sm:grid-rows-1">
+        <div className=" sm:block flex flex-col items-center gap-y-2">
+          <div className="text-themeCyan font-bold sm:text-2xl sm:mb-4 mb-2 sm:mx-0 ">
             <Typewriter
               options={{
                 strings: ["Front End Developer", "Pen Spinner", "NextJs Lover"],
@@ -59,10 +60,10 @@ const Index = () => {
               }}
             />
           </div>
-          <div className="text-4xl text-white  font-pacifico tracking-wider mb-4">
+          <div className="sm:text-4xl text-white text-2xl  font-pacifico tracking-wider sm:mb-4 mb-2 ">
             Aziz Imranzade
           </div>
-          <div className="text-gray-400 text-lg mb-6">
+          <div className="text-gray-400 sm:text-lg mb-6 sm:text-left text-center">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Laudantium, aspernatur tempora excepturi, recusandae labore non
             provident animi quae dolor deleniti maxime quod at quia! Quae eaque
@@ -75,7 +76,7 @@ const Index = () => {
             Contact With Me
           </ContactButton>
         </div>
-        <div className="w-[30rem]">
+        <div className="sm:w-[30rem]">
           <Lottie
             options={webDevAnimationOptions}
             isClickToPauseDisabled={true}
@@ -149,9 +150,9 @@ const Index = () => {
           </div>
         </div>
       </div>
-      <div className="h-screen index-section justify-center bg-themeBlack flex gap-x-32 items-center px-20">
+      <div className="h-screen index-section justify-center bg-themeBlack flex sm:flex-row flex-col gap-x-32 items-center sm:px-20 px-4 ">
         <div className="flex flex-col items-center">
-          <div className="border-themeCyan border-8 cursor-pointer hover:shadow-2xl transition-all hover:-translate-y-2 border-double mb-8 rounded-full overflow-hidden w-60 h-60 object-cover">
+          <div className="border-themeCyan border-8 cursor-pointer hover:shadow-2xl transition-all hover:-translate-y-2 border-double sm:mb-8 mb-4 rounded-full overflow-hidden  w-40 h-40 sm:w-60 sm:h-60 object-cover">
             <Image
               src="/avatar.png"
               width="400px"
@@ -159,14 +160,14 @@ const Index = () => {
               alt="Aziz Imranzade Profile picture"
             />
           </div>
-          <h1 className="text-gray-300 font-semibold text-3xl mb-6 ">
+          <h1 className="text-gray-300 font-semibold sm:text-3xl mb-6 text-xl ">
             Social Media
           </h1>
-          <ul className="flex gap-x-10">
+          <ul className="flex sm:gap-x-10 gap-x-6 sm:mb-0 mb-6">
             <li>
               <a
-                href="https://www.instagram.com/i.am.eziz/"
-                className="text-themeCyan text-3xl z"
+                href="https://www.instagram.com/pintidevaziz/"
+                className="text-themeCyan sm:text-3xl  text-2xl"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -175,8 +176,8 @@ const Index = () => {
             </li>
             <li>
               <a
-                href="https://github.com/IamEziz"
-                className="text-themeCyan text-3xl "
+                href="https://github.com/PintiDevAziz"
+                className="text-themeCyan sm:text-3xl  text-2xl"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -186,7 +187,7 @@ const Index = () => {
             <li>
               <a
                 href="https://www.youtube.com/channel/UCpERt5A7SNd7s5XNAj2mGmw"
-                className="text-themeCyan text-3xl "
+                className="text-themeCyan sm:text-3xl  text-2xl"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -195,11 +196,11 @@ const Index = () => {
             </li>
           </ul>
         </div>
-        <div className=" text-gray-300 text-lg">
-          <h1 className="text-white font-pacifico text-3xl mb-14 relative after:block after:w-[40%] after:absolute after:bg-themeCyan after:h-1 after:-bottom-2">
+        <div className=" text-gray-300 sm:text-lg">
+          <h1 className="text-white font-pacifico sm:text-3xl sm:mb-14 mb-6 relative after:block after:w-[40%] after:absolute after:bg-themeCyan after:h-1 after:-bottom-2">
             Who Is I Am ?
           </h1>
-          <div className="w-[40rem]">
+          <div className="sm:w-[40rem]">
             <p className="mb-2">
               {" "}
               I am Eziz and I am Web Developer Lorem, ipsum dolor sit amet

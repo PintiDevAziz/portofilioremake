@@ -14,12 +14,19 @@ html {
 .index-section {
   scroll-snap-align: end;
 }
+.header {
+  scroll-snap-align: top;
+}
+.skills{
+  scroll-snap-align: end;
+}
 .footer {
-  scroll-snap-align: start;
+  scroll-snap-align: end;
 }
 /* width */
 ::-webkit-scrollbar {
   width: 3px;
+  height: 3px;
 }
 
 /* Track */
