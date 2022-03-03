@@ -54,7 +54,14 @@ const Index = () => {
           <div className="text-themeCyan font-bold sm:text-2xl sm:mb-4 mb-2 sm:mx-0 ">
             <Typewriter
               options={{
-                strings: ["Front End Developer", "Pen Spinner", "NextJs Lover"],
+                strings: [
+                  "Front End Developer",
+                  "Pen Spinner",
+                  "NextJs Lover",
+                  "React Lover",
+                  "Pintipanda Lover",
+                  "Balisong Spinner",
+                ],
                 autoStart: true,
                 loop: true,
               }}
@@ -64,10 +71,10 @@ const Index = () => {
             Aziz Imranzade
           </div>
           <div className="text-gray-400 sm:text-lg mb-6 sm:text-left text-center">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Laudantium, aspernatur tempora excepturi, recusandae labore non
-            provident animi quae dolor deleniti maxime quod at quia! Quae eaque
-            pariatur corporis omnis saepe?
+            I am a Software Engineer, I have a passion for building applications
+            and solving problems. I am a self-taught developer, I have a lot of
+            experience in building web applications and I am always looking for
+            new challenges to learn.
           </div>
           <ContactButton
             setIsModalOpen={setIsModalOpen}
@@ -93,22 +100,22 @@ const Index = () => {
             isModalOpen
               ? "opacity-100 visible translate-y-0"
               : "opacity-0 invisible translate-y-full"
-          } absolute p-24 transition-all bg-themeBlack/90 z-50 flex duration-500 items-center justify-center w-full h-[calc(100vh-4rem)]`}
+          } absolute sm:p-24  transition-all bg-themeBlack/90 z-50 flex duration-500 items-center justify-center w-full h-[calc(100vh-4rem)]`}
         >
           <div className="flex items-center relative  w-full  rounded justify-between">
             <VscChromeClose
               onClick={() => setIsModalOpen(false)}
               className=" text-white -right-16 -top-14 text-3xl absolute cursor-pointer hover:text-themeCyan"
             />
-            <div className=" w-1/2 ">
-              <h1 className="text-white text-4xl font-semibold mb-6">
+            <div className=" sm:w-1/2  ">
+              <h1 className="text-white sm:text-4xl text-3xl text-center font-semibold mb-6">
                 Contact With Me
               </h1>
-              <div className="w-full">
+              <div className="w-full ">
                 <form
                   action="https://formsubmit.co/i.am.hacker.eziz@gmail.com"
                   method="POST"
-                  className="flex flex-col gap-y-10 text-white"
+                  className="flex flex-col sm:gap-y-10 gap-y-6 text-white w-full  px-6"
                 >
                   <input type="hidden" name="_template" value="box" />
                   <input
@@ -116,32 +123,32 @@ const Index = () => {
                     name="name"
                     required
                     placeholder="Enter Your Name"
-                    className=" outline-none valid:border-themeCyan bg-transparent border-2 rounded w-[30rem] h-12 text-center"
+                    className=" outline-none valid:border-themeCyan bg-transparent border-2 rounded sm:w-[30rem] w-[20rem] h-12  text-center"
                   />
                   <input
                     type="email"
                     name="email"
                     placeholder="Enter Your Email"
                     required
-                    className=" outline-none valid:border-themeCyan bg-transparent border-2 rounded w-[30rem] h-12 text-center"
+                    className="outline-none valid:border-themeCyan bg-transparent border-2 rounded sm:w-[30rem] w-[20rem] h-12  text-center"
                   />
                   <textarea
                     type="text"
                     name="Message"
                     placeholder="Enter Your Message"
                     required
-                    className=" outline-none resize-none valid:border-themeCyan bg-transparent border-2 rounded w-[30rem] h-52 break-all whitespace-pre-wrap p-4 flex flex-wrap"
+                    className=" outline-none resize-none valid:border-themeCyan bg-transparent border-2 rounded sm:w-[30rem] w-[20rem] h-52 break-all whitespace-pre-wrap p-4 flex flex-wrap"
                   />
                   <button
                     type="submit"
-                    className="bg-transparent w-72 border-2 rounded h-12 border-themeCyan text-themeCyan font-semibold hover:bg-themeCyan hover:text-themeBlack transition-all tracking-wider text-lg"
+                    className="bg-transparent sm:w-72 w-52 mx-auto border-2 rounded h-12 border-themeCyan text-themeCyan font-semibold hover:bg-themeCyan hover:text-themeBlack transition-all tracking-wider text-lg"
                   >
                     Send
                   </button>
                 </form>
               </div>
             </div>
-            <div className="w-1/2 -translate-y-12">
+            <div className="w-1/2 -translate-y-12 sm:block hidden">
               <Lottie
                 options={contactUsAnimationOptions}
                 isClickToPauseDisabled={true}
@@ -203,17 +210,16 @@ const Index = () => {
           <div className="sm:w-[40rem]">
             <p className="mb-2">
               {" "}
-              I am Eziz and I am Web Developer Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Officia sint magni sit minima,
-              numquam tenetur atque veniam impedit totam magnam? Tenetur in iure
-              ipsum
+              I am Aziz Imranzade a web developer and a software engineer. I am
+              in love with web development and playing video games. For now I am
+              a student at Baku. My favorite hobbies are playing video games,
+              Balisong and Pen spinning and playing football. I am a huge fan of
+              video games
             </p>
             <p>
-              placeat quidem laboriosam doloribus ipsam totam. Lorem ipsum,
-              dolor sit amet consectetur adipisicing elit. Praesentium
-              architecto fugit, totam culpa similique aspernatur iure?
-              Distinctio sit mollitia libero, asperiores modi tenetur non
-              excepturi quo animi ducimus nobis blanditiis!
+              Here is my portofilio web page. You can see my social media
+              accounts , my porjects , my blogs , my resume and my contact
+              information.
             </p>
           </div>
         </div>
