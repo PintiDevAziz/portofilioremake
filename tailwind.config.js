@@ -27,17 +27,7 @@ module.exports = {
         themeBlack: "#1F2933",
         themeGray: "#2B3443",
         footerBackground: "#1B222C",
-      },
-      backgroundImage: () => ({
-        "gradient-radial-to-tr":
-          "radial-gradient(115% 90% at 0% 100%, var(--tw-gradient-stops))",
-        "gradient-radial-to-tl":
-          "radial-gradient(115% 90% at 100% 100%, var(--tw-gradient-stops))",
-        "gradient-radial-to-br":
-          "radial-gradient(90% 115% at 0% 0%, var(--tw-gradient-stops))",
-        "gradient-radial-to-bl":
-          "radial-gradient(90% 115% at 100% 0%, var(--tw-gradient-stops))",
-      }),
+      }
     },
   },
   variants: {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Lottie from "react-lottie";
 import Typewriter from "typewriter-effect";
 import WebDevAnimationData from "../Animations/webdevelopment.json";
@@ -9,9 +9,12 @@ import ContactUsAnimationData from "../Animations/contactus.json";
 import { SiInstagram } from "react-icons/si";
 import { FiYoutube } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
-import Image from "next/image";
 import Head from "next/head";
+import sanityCleint from "../scleint";
+import BlockContent from "@sanity/block-content-to-react";
+import imgUrl from "../components/imgBuilder";
 const Index = () => {
+  const [adminInfo, setAdminInfo] = useState([]);
   const webDevAnimationOptions = {
     loop: true,
     autoplay: true,
@@ -27,11 +30,25 @@ const Index = () => {
     autoplay: true,
     animationData: ContactUsAnimationData,
   };
+  useEffect(() => {
+    sanityCleint
+      .fetch(
+        `*[_type == "author"]{
+        bio,
+        name,
+        image{
+          asset
+        }
+      }`
+      )
+      .then((data) => setAdminInfo(data));
+  }, []);
+  console.log(adminInfo);
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div>
       <Head>
-        <title>I Am Eziz</title>
+        <title>I am {adminInfo.length > 0 ? adminInfo[0].name : "Name"  }</title>
         <meta
           name="google-site-verification"
           content="_7XyZx-FbC2VG29NayjjKLrQph_IRF4dYh1LuqvPi6E"
@@ -46,10 +63,15 @@ const Index = () => {
           content="Aziz Imranzade Full-Stack Developer Website"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/avatar.png" />
+        <meta
+          property="og:image"
+          content={
+            adminInfo.length > 0 ? imgUrl(adminInfo[0].image) : "/noimage.png"
+          }
+        />
         <meta property="og:url" content="https://www.colbyfayock.com" />
       </Head>
-      <div className="index-section sm:px-20 p-4 overflow-hidden relative bg-themeBlack h-[calc(100vh-80px)] grid place-items-center sm:grid-cols-2 sm:grid-rows-1">
+      <div className=" sm:px-20 p-4 overflow-hidden relative bg-themeBlack   h-[calc(100vh-80px)] grid place-items-center sm:grid-cols-2 sm:grid-rows-1">
         <div className=" sm:block flex flex-col items-center gap-y-2">
           <div className="text-themeCyan font-bold sm:text-2xl sm:mb-4 mb-2 sm:mx-0 ">
             <Typewriter
@@ -157,13 +179,16 @@ const Index = () => {
           </div>
         </div>
       </div>
-      <div className="h-screen index-section justify-center bg-themeBlack flex sm:flex-row flex-col gap-x-32 items-center sm:px-20 px-4 ">
+      <div className=" h-screen bg-themeBlack flex sm:flex-row   justify-center flex-col gap-x-32 items-center sm:px-20 px-4 ">
         <div className="flex flex-col items-center">
-          <div className="border-themeCyan border-8 cursor-pointer hover:shadow-2xl transition-all hover:-translate-y-2 border-double sm:mb-8 mb-4 rounded-full overflow-hidden  w-40 h-40 sm:w-60 sm:h-60 object-cover">
-            <Image
-              src="/avatar.png"
-              width="400px"
-              height="400px"
+          <div className="border-themeCyan border-8 sm:mt-0 cursor-pointer hover:shadow-2xl transition-all hover:-translate-y-2 border-double sm:mb-8 mb-4 rounded-full overflow-hidden  w-40 h-40 sm:w-60 sm:h-60 object-cover">
+            <img
+              src={
+                adminInfo.length > 0
+                  ? imgUrl(adminInfo[0].image)
+                  : "/noimage.png"
+              }
+              className=" w-full h-full object-cover "
               alt="Aziz Imranzade Profile picture"
             />
           </div>
@@ -204,23 +229,15 @@ const Index = () => {
           </ul>
         </div>
         <div className=" text-gray-300 sm:text-lg">
-          <h1 className="text-white font-pacifico sm:text-3xl sm:mb-14 mb-6 relative after:block after:w-[40%] after:absolute after:bg-themeCyan after:h-1 after:-bottom-2">
+          <h1 className="text-white font-pacifico sm:text-3xl sm:mb-12 mb-6 relative after:block after:w-[40%] after:absolute after:bg-themeCyan after:h-1 after:-bottom-2">
             Who Is I Am ?
           </h1>
-          <div className="sm:w-[40rem]">
-            <p className="mb-2">
-              {" "}
-              I am Aziz Imranzade a web developer and a software engineer. I am
-              in love with web development and playing video games. For now I am
-              a student at Baku. My favorite hobbies are playing video games,
-              Balisong and Pen spinning and playing football. I am a huge fan of
-              video games
-            </p>
-            <p>
-              Here is my portofilio web page. You can see my social media
-              accounts , my porjects , my blogs , my resume and my contact
-              information.
-            </p>
+          <div className="sm:w-[40rem] sm:leading-8 leading-7 ">
+            <BlockContent
+              blocks={adminInfo.length > 0 && adminInfo[0].bio}
+              projectId="9m6pnn5g"
+              dataset="production"
+            />
           </div>
         </div>
       </div>

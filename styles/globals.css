@@ -6,11 +6,7 @@
 .index-section {
   scroll-snap-align: start;
 }
-body,
-html {
-  scroll-snap-type: mandatory;
-  scroll-snap-type: y mandatory;
-}
+
 .index-section {
   scroll-snap-align: end;
 }

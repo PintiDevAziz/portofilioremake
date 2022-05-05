@@ -1,22 +1,50 @@
-import React from "react";
-import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import sanityClient from "../../scleint";
 import BlogPostBox from "../../components/BlogPostBox";
-const Blog = ({ posts }) => {
+import Loading from "../../Animations/loading";
+const Index = () => {
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type=="post"]{
+      body,
+      title,
+      excerpt,
+      publishedAt,
+      mainImage{
+        asset->{
+          _id,
+          url
+        }
+      },
+      _id,
+      slug,
+      "authorName":author->name,
+      "authorImage":author->image
+    }`
+      )
+      .then((data) => {
+        setPosts(data);
+      });
+  }, []);
   return (
-    <div className="min-h-[calc(100vh-80px)] h-auto bg-themeBlack sm:p-24 p-10 flex flex-wrap gap-10">
-      {posts.map((post, key) => (
-        <BlogPostBox {...post} key={key} />
-      ))}
+    <div className="h-[calc(100vh-5rem)] bg-themeBlack sm:px-20 px-10 pt-10 flex gap-6">
+      {posts.length > 0 ? (
+        <>
+          {posts.map((post, key) => (
+            <BlogPostBox post={post} key={key} />
+          ))}
+        </>
+      ) : (
+        <div className="flex justify-center items-center h-full w-full">
+          <div className="w-[30rem] h-[30rem]">
+            <Loading />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
-import { getAllNodes } from "next-mdx/server";
 
-export async function getStaticProps() {
-  return {
-    props: {
-      posts: await getAllNodes("post"),
-    },
-  };
-}
-export default Blog;
+export default Index;
