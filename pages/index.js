@@ -43,33 +43,24 @@ const Index = () => {
       )
       .then((data) => setAdminInfo(data));
   }, []);
-  console.log(adminInfo);
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div>
       <Head>
-        <title>I am {adminInfo.length > 0 ? adminInfo[0].name : "Name"  }</title>
+        <title>I am PintiDevAziz</title>
         <meta
           name="google-site-verification"
           content="_7XyZx-FbC2VG29NayjjKLrQph_IRF4dYh1LuqvPi6E"
         />
+        <meta name="description" content="PintiDevAziz Official Web Page" />
         <meta
-          name="description"
-          content="Bura Eziz Imranzadenin Web Sehifesdir"
+          name="keywords"
+          content="PintiDev, PintiDevAziz ,Aziz Imranzade ,Aziz Imranzade Developer,Aziz"
         />
-        <meta name="keywords" content="Eziz Imranzade " />
-        <meta
-          property="og:title"
-          content="Aziz Imranzade Full-Stack Developer Website"
-        />
+        <meta property="og:title" content="PintiDevAziz Official Web Page" />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content={
-            adminInfo.length > 0 ? imgUrl(adminInfo[0].image) : "/noimage.png"
-          }
-        />
-        <meta property="og:url" content="https://www.colbyfayock.com" />
+        <meta property="og:image" content="/ogavatar.jpg" />
+        <meta property="og:url" content="https://pintidevaziz.vercel.app/" />
       </Head>
       <div className=" sm:px-20 p-4 overflow-hidden relative bg-themeBlack   h-[calc(100vh-80px)] grid place-items-center sm:grid-cols-2 sm:grid-rows-1">
         <div className=" sm:block flex flex-col items-center gap-y-2">

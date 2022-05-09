@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Logo from "./minicomponents/Logo";
 import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
-import {AiOutlineMenu} from 'react-icons/ai'
+import { AiOutlineMenu } from "react-icons/ai";
 const Header = () => {
   const router = useRouter();
   const [isMenu, setIsMenu] = useState(false);
@@ -22,6 +22,10 @@ const Header = () => {
     {
       title: "Blog",
       path: "/blog",
+    },
+    {
+      title: "Gallery",
+      path: "/gallery",
     },
   ];
   return (
@@ -58,7 +62,7 @@ const Header = () => {
           setIsMenu(!isMenu);
         }}
       >
-        <AiOutlineMenu className="text-white text-3xl"/>
+        <AiOutlineMenu className="text-white text-3xl" />
       </div>
     </div>
   );

@@ -3,6 +3,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+  @variants responsive {
+    .masonry {
+      column-gap: 1.5em;
+      column-count: 1;
+    }
+    .masonry-sm {
+      column-gap: 1.5em;
+      column-count: 2;
+    }
+    .masonry-md {
+      column-gap: 1.5em;
+      column-count: 3;
+    }
+  }
+}
 .index-section {
   scroll-snap-align: start;
 }
@@ -13,7 +29,7 @@
 .header {
   scroll-snap-align: top;
 }
-.skills{
+.skills {
   scroll-snap-align: end;
 }
 .footer {

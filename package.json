@@ -12,6 +12,7 @@
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^3.3.0",
     "@sanity/image-url": "^1.0.1",
+    "@tailwindcss/line-clamp": "^0.4.0",
     "d3-ease": "^3.0.1",
     "moment": "^2.29.3",
     "next": "^11.1.2",

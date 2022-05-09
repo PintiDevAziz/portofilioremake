@@ -7,6 +7,7 @@ import Link from "next/link";
 import BlockContent from "@sanity/block-content-to-react";
 import Pre from "../../components/Pre";
 import Loading from "../../Animations/loading";
+import Head from "next/head";
 import {
   AiOutlineGithub,
   AiOutlineInstagram,
@@ -51,7 +52,6 @@ const Slug = () => {
       )
       .then((data) => setSinglePost(data[0]));
   }, [router.asPath]);
-  console.log(singlePost);
   const serializers = {
     types: {
       code: (props) => <Pre lang={props.node.language}>{props.node.code}</Pre>,
@@ -67,6 +67,24 @@ const Slug = () => {
   }, [singlePost]);
   return (
     <div className="min-h-[calc(100vh-5rem)] bg-themeBlack sm:px-28 px-6  pt-10 flex flex-col  snap-none">
+      <Head>
+        <title>
+          PintiDevAziz terefinde yazilan blog - 
+          {router.asPath.replace("/blog/", "")}
+        </title>
+        <meta
+          property="og:title"
+          content={`${router.asPath.replace(
+            "/blog/",
+            ""
+          )} haqqinda daha cox oyrenin `}
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content={`https://pintidevaziz.vercel.app${router.asPath}`}
+        />
+      </Head>
       {singlePost ? (
         <>
           <div className="border-b-2 px-8 border-themeGray pb-2 mb-4 flex items-center gap-x-4 justify-between  flex-col sm:gap-y-0 gap-y-6 sm:flex-row">

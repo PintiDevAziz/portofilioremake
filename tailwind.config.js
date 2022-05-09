@@ -27,11 +27,14 @@ module.exports = {
         themeBlack: "#1F2933",
         themeGray: "#2B3443",
         footerBackground: "#1B222C",
-      }
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/line-clamp"),
+  ],
 };
