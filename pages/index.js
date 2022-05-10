@@ -50,7 +50,7 @@ const Index = () => {
         <title>I am PintiDevAziz</title>
         <meta
           name="google-site-verification"
-          content="_7XyZx-FbC2VG29NayjjKLrQph_IRF4dYh1LuqvPi6E"
+          content="bMk_eZ5tdYPCsR7m8Jvs5_eYmecvxclpwXLolYK1f2U"
         />
         <meta name="description" content="PintiDevAziz Official Web Page" />
         <meta
