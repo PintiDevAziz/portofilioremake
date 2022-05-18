@@ -47,7 +47,7 @@ const Index = () => {
   return (
     <div>
       <Head>
-        <title>I am PintiDevAziz</title>
+        <title>I Am PintiDevAziz</title>
         <meta
           name="google-site-verification"
           content="bMk_eZ5tdYPCsR7m8Jvs5_eYmecvxclpwXLolYK1f2U"

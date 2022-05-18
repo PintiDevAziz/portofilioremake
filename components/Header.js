@@ -35,10 +35,12 @@ const Header = () => {
     >
       <Logo />
       <ul
-        className={`flex sm:static sm:w-auto transition-all ${
+        className={`flex sm:static sm:w-auto transition-all  ${
           isMenu ? "translate-y-0" : " sm:translate-y-0 -translate-y-full"
         }  inset-0 z-[100] sm:z-0 justify-center sm:justify-start absolute items-center gap-x-10 sm:flex-row flex-col w-full bg-black/50 sm:bg-transparent gap-y-8 sm:gap-y-0`}
       >
+        <AiOutlineMenu className="text-white text-3xl absolute top-6 right-4 sm:hidden" onClick={()=>setIsMenu(!isMenu)} />
+
         {headerMenus.map((menu, key) => (
           <Link key={key} href={menu.path}>
             <a

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Head from "next/head";
 import sanityClient from "../scleint";
 import Loading from "../Animations/loading";
 import imgUrl from "../components/imgBuilder";
@@ -18,6 +19,20 @@ const Gallery = () => {
   console.log(galeryImages);
   return (
     <div className="min-h-[calc(100vh-5rem)]  bg-themeBlack [column-fill:_balance] sm:px-20 sm:py-12 py-4 px-6">
+       <Head>
+        <title>
+          Gallery
+        </title>
+        <meta
+          property="og:title"
+          content={`PintiDevAziz's Gallery`}
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content={`https://pintidevaziz.vercel.app/gallery`}
+        />
+      </Head>
       {galeryImages.length > 0 ? (
         <>
           {galeryImages.length == 0 ? (

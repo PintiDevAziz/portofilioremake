@@ -5,7 +5,7 @@ import { DiCss3Full, DiSass, DiJavascript1, DiNpm ,DiPython} from "react-icons/d
 import { GrReactjs } from "react-icons/gr";
 import { SiNextDotJs, SiTailwindcss } from "react-icons/si";
 import { VscGithub } from "react-icons/vsc";
-
+import Head from "next/head";
 const Skills = () => {
   const skillsData = [
     {
@@ -73,6 +73,24 @@ const Skills = () => {
     <div
       className="flex flex-col items-center bg-themeBlack pb-4  sm:h-auto  h-[calc(100vh-80px)]  overflow-auto skills"
     >
+      <Head>
+        <title>
+          PintiDevAziz Skills
+        </title>
+        <meta
+          property="og:title"
+          content={`PintiDevAziz's skills`}
+        />
+        <meta
+          name="keywords"
+          content="PintiDev, PintiDevAziz ,Aziz Imranzade ,Aziz Imranzade Developer,Aziz,Kodlama Blog, Pintidevaziz skills"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content={`https://pintidevaziz.vercel.app/skills`}
+        />
+      </Head>
       <h1 className="my-10 text-3xl sm:text-4xl font-pacifico tracking-widest text-themeCyan">
         My Coding Skills
       </h1>

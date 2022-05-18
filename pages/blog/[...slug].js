@@ -69,8 +69,7 @@ const Slug = () => {
     <div className="min-h-[calc(100vh-5rem)] bg-themeBlack sm:px-28 px-6  pt-10 flex flex-col  snap-none">
       <Head>
         <title>
-          PintiDevAziz terefinde yazilan blog - 
-          {router.asPath.replace("/blog/", "")}
+          PintiDevAziz Blog {router.asPath.replace("/blog/", "")}
         </title>
         <meta
           property="og:title"
@@ -78,6 +77,10 @@ const Slug = () => {
             "/blog/",
             ""
           )} haqqinda daha cox oyrenin `}
+        />
+        <meta
+          name="keywords"
+          content="PintiDev, PintiDevAziz ,Aziz Imranzade ,Aziz Imranzade Developer,Aziz,Kodlama Blog, Pintidevaziz skills"
         />
         <meta property="og:type" content="website" />
         <meta
